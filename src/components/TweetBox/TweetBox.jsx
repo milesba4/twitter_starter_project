@@ -9,13 +9,14 @@ export default function TweetBox({userProfile,setTweets,tweets}) {
   }
 
   return (
+   
     <div className="tweet-box">
       <TweetInput />
 
       <div className="tweet-box-footer">
         <TweetBoxIcons />
         <TweetCharacterCount />
-        <TweetSubmitButton />
+        <TweetSubmitButton handleOnSubmit={handleOnSubmit}/>
       </div>
     </div>
   )
@@ -37,7 +38,7 @@ export function TweetCharacterCount(props) {
   return <span></span>
 }
 
-export function TweetSubmitButton() {
+export function TweetSubmitButton({handleOnSubmit}) {
   return (
     <div className="tweet-submit">
       <i className="fas fa-plus-circle"></i>
