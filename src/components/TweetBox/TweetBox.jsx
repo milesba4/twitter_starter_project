@@ -3,6 +3,11 @@ import TweetInput from "./TweetInput"
 import "./TweetBox.css"
 
 export default function TweetBox({userProfile,setTweets,tweets, tweetText, setTweetText}) {
+  const handleOnTweetTextChange=(evt)=>{
+    setTweetText(evt.target.value);
+    ;
+
+  }
   const handleOnSubmit=()=>{
     const newTweet={name:userProfile.name , handle: userProfile.handle, text:"",likes:0, retweets:0, comments:0, id:tweets.length}
     setTweets(tweets => [...tweets, newTweet]);
