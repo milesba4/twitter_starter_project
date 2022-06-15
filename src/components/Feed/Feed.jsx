@@ -15,7 +15,11 @@ export default function Feed({tweets, setTweets, userProfile}) {
         </p>
       </div>
 
-      <div className="twitter-feed">{/* ADD CODE HERE */}</div>
+      <div className="twitter-feed">{tweets.map((element,idx)=>{
+        return(
+          <Tweet key={idx} tweet={element}  />
+        )
+      })}</div>
     </div>
   )
 }
