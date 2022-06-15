@@ -18,7 +18,7 @@ export default function TweetBox({userProfile,setTweets,tweets, tweetText, setTw
   return (
    
     <div className="tweet-box">
-      <TweetInput value={tweetText} />
+      <TweetInput value={tweetText} handleOnChange={handleOnTweetTextChange} />
 
       <div className="tweet-box-footer">
         <TweetBoxIcons />
