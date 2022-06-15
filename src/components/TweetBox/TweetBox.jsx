@@ -4,8 +4,10 @@ import "./TweetBox.css"
 
 export default function TweetBox({userProfile,setTweets,tweets}) {
   const handleOnSubmit=()=>{
-    const newTweet={name:userProfile.name , handle: userProfile.handle, text:"",likes:0, retweets:0, comments:0, id:tweets.length()}
-    setTweets(tweets => [tweets, newTweet]);
+    const newTweet={name:userProfile.name , handle: userProfile.handle, text:"",likes:0, retweets:0, comments:0, id:tweets.length}
+    setTweets(tweets => [...tweets, newTweet]);
+   
+
   }
 
   return (
@@ -42,7 +44,7 @@ export function TweetSubmitButton({handleOnSubmit}) {
   return (
     <div className="tweet-submit">
       <i className="fas fa-plus-circle"></i>
-      <button className="tweet-submit-button">Tweet</button>
+      <button className="tweet-submit-button" onClick={handleOnSubmit}>Tweet</button>
     </div>
   )
 }
