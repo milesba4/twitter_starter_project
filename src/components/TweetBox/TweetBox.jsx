@@ -13,7 +13,7 @@ export default function TweetBox({userProfile,setTweets,tweets, tweetText, setTw
   return (
    
     <div className="tweet-box">
-      <TweetInput />
+      <TweetInput value={tweetText} />
 
       <div className="tweet-box-footer">
         <TweetBoxIcons />
