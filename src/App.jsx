@@ -8,7 +8,7 @@ import { codepathUserProfile, firstTweet, navLinks } from "./constants"
 
 export default function App() {
   const[userProfile, setUserProfile] = React.useState(codepathUserProfile)
-  const[tweets, setTweets] = React.useState(firstTweet)
+  const[tweets, setTweets] = React.useState([firstTweet])
 
   return (
     <div className="app">
